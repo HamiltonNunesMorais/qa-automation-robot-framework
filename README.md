@@ -1,22 +1,52 @@
-# qa-automation-robot-framework
+ # Test Automation - Robot Framework 
 
-## v env 
+Projeto de automação de testes utilizando **Robot Framework**, cobrindo:
+
+- ✅ Testes de API (REST)
+- ✅ Testes de UI (Web)
+- ✅ Validação de contrato
+- ✅ Dados dinâmicos (Faker)
+
+---
+
+## Tecnologias utilizadas
+
+- Robot Framework
+- SeleniumLibrary (UI)
+- RequestsLibrary (API)
+- JSONLibrary
+- FakerLibrary
+- WebDriver Manager
+
+## Setup do ambiente
+
+### Criar ambiente virtual
+- Instalar automaticamente com o arquivo:
+```bash
+setup.bat
+```
+- Instalar manualmente:
+```bash
 python -m venv venv
 venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-## libs
-
-pip install robotframework
-pip install robotframework-seleniumlibrary
-pip install robotframework-requests
-pip install webdriver-manager
-pip install robotframework-jsonlibrary
-pip freeze > requirements.txt
-pip install robotframework-faker
-pip install robotframework-seleniumlibrary
-
-## run tests 
+### Executando testes
+- Todos
+```bash
+robot -d results tests
+```
+- API
+```bash
 robot -d results tests/api
-and check results
-
-robot tests/api/users/get_user.robot
+```
+- UI
+```bash
+robot tests/ui
+```
+### Resultados
+Após execução:
+```bash
+results/report.html
+```
